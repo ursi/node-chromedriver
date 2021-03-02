@@ -16,7 +16,7 @@ const { getChromeVersion } = require('@testim/chrome-version');
 const HttpsProxyAgent = require('https-proxy-agent');
 const getProxyForUrl = require("proxy-from-env").getProxyForUrl;
 
-const skipDownload = process.env.npm_config_chromedriver_skip_download || process.env.CHROMEDRIVER_SKIP_DOWNLOAD;
+const skipDownload = 'true';
 if (skipDownload === 'true') {
   console.log('Found CHROMEDRIVER_SKIP_DOWNLOAD variable, skipping installation.');
   process.exit(0);
